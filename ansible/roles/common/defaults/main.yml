@@ -1,2 +1,13 @@
 ---
 # defaults file for common
+
+common_users:
+
+  # `app` user runs the code (RO access on source code)
+  app:
+    uid: 202
+    gid: 202
+    group: app # Primary user group
+    groups: app # Additional groups
+    shell: /bin/bash
+    comment: 'App User'
