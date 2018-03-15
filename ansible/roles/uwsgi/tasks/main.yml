@@ -9,3 +9,7 @@
   with_items:
     - python-pip
     - python-dev
+
+- name: Install virtualenv
+  pip:
+    name: virtualenv
