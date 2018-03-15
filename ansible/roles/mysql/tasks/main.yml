@@ -12,6 +12,7 @@
     src: templates/my.cnf.j2
     dest: ~/.my.cnf
     owner: root
+    mode: 0600
 
 #- name: Create a new database with name 'beerbattle'
 #  mysql_db:
