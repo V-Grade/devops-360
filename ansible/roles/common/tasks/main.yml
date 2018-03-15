@@ -22,12 +22,6 @@
   timezone:
     name: Europe/
 
-- name: Create system groups
-  group:
-    name: "{{ item.key }}"
-    gid: "{{ item.value.gid }}"
-  with_dict: "{{ common_users }}"
-
 - name: Create system users
   user:
     name: "{{ item.key }}"
