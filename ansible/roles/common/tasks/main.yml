@@ -1,2 +1,14 @@
 ---
 # tasks file for common
+
+- name: Stop apache 2
+  service:
+    state: stopped
+    name: apache2
+
+
+- name: Install common apt-packages
+  apt:
+    name: htop
+    update_cache: yes
+    state: present
