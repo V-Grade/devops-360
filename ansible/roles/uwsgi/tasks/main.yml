@@ -1,2 +1,11 @@
 ---
 # tasks file for uwsgi
+
+- name: Install UWSGI
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+    state: present
+  with_items:
+    - python-pip
+    - python-dev
