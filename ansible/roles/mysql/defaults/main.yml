@@ -1,2 +1,31 @@
 ---
 # defaults file for mysql
+
+- name: Install mysql apt-packages
+  apt:
+    name: mysql-server
+    update_cache: yes
+    state: present
+
+- name: copy .my.cnf file with root password
+  template:
+    src: templates/root/mysql.j2
+    dest: ~/.my.cnf
+    owner: root
+
+#- name: Create a new database with name 'beerbattle'
+#  mysql_db:
+#    name: beerbattle
+#    state: present
+#
+#- name: Copy database dump file
+#  copy:
+#    src: dump.sql.bz2
+#    dest: /tmp
+#
+#- name: Restore database
+#  mysql_db:
+#    name: my_db
+#    state: import
+#    target: /tmp/dump.sql.bz2
+
