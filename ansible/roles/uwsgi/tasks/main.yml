@@ -3,13 +3,6 @@
 
 - name: Install UWSGI
   apt:
-    name: "{{ item }}"
+    name: python-uwsgi
     update_cache: yes
     state: present
-  with_items:
-    - python-pip
-    - python-dev
-
-- name: Install virtualenv
-  pip:
-    name: virtualenv
