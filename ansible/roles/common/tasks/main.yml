@@ -6,9 +6,18 @@
     state: stopped
     name: apache2
 
-
 - name: Install common apt-packages
   apt:
-    name: htop
+    name: "{{ item }}
     update_cache: yes
     state: present
+  with_items:
+    - htop
+    - telnet
+    - net-tools
+    - ntp
+    - git
+
+- name: Timezone
+  timezone:
+    name: Europe/Paris
