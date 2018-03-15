@@ -11,5 +11,5 @@
   become: yes
 
   roles:
-     - mysql
-     - webapp-database
+    - mysql
+    - webapp-database

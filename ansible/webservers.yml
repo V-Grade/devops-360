@@ -11,7 +11,7 @@
   become: yes
 
   roles:
-      - common
-      - nginx
-      - usgwi
-      - webapp
+    - common
+    - nginx
+    - usgwi
+    - webapp
