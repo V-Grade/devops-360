@@ -1,9 +1,6 @@
 ---
 # tasks file for nginx
 
----
-# tasks file for hello-world
-
 - name: Stop apache
   service:
     state: stopped
