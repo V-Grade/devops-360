@@ -16,12 +16,12 @@
     state: started
     enabled: true
 
-- name: Set MySQL root password
-  mysql_user:
-    login_user: root
-    login_password: ""
-    name: root
-    password: "{{ mysql_root_password }}"
+#- name: Set MySQL root password
+#  mysql_user:
+#    login_user: root
+#    login_password: ""
+#    name: root
+#    password: "{{ mysql_root_password }}"
 
 - name: Copy MySQL Credentials
   template:
