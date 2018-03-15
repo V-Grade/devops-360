@@ -25,7 +25,7 @@
 
 - name: Copy MySQL Credentials
   template:
-    src: templates/.my.cnf
+    src: templates/my.cnf.j2
     dest: ~/.my.cnf
     owner: root
     mode: 0600
