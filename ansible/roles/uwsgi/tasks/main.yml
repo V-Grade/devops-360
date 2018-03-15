@@ -3,6 +3,10 @@
 
 - name: Install UWSGI
   apt:
-    name: python-uwsgi
+    name: "{{ item }}"
     update_cache: yes
     state: present
+  with_items:
+    - python-pip
+    - python-dev
+    - python-uwsgi
