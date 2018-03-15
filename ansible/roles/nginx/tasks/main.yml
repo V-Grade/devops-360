@@ -12,17 +12,15 @@
     update_cache: yes
     state: present
 
-#- name: Remove conf
-#  copy:
-#    src: helloworld
-#    dest: /etc/nginx/sites-available
-#    state: absent
-#
-#- name: Remove symlink
-#  file:
-#    state: link
-#    src: /etc/nginx/sites-available/helloworld
-#    dest: /etc/nginx/sites-enabled/helloworld
+- name: Remove conf
+  file:
+    state: absent
+    path: /etc/nginx/sites-available/default
+
+- name: Remove symlink
+  file:
+    state: absent
+    path: /etc/nginx/sites-enabled/default
 
 - name: Restart ngnix
   service:
