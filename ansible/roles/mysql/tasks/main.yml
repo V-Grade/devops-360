@@ -3,12 +3,12 @@
 
 - name: Install mysql apt-packages
   apt:
-      name: "{{ item }}"
-      update_cache: yes
-      state: present
-    with_items:
-      - mysql-server
-      - MySQL-python
+    name: "{{ item }}"
+    update_cache: yes
+    state: present
+  with_items:
+    - mysql-server
+    - MySQL-python
 
 - name: Start MySQL Service
   service:
