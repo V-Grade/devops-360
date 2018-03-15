@@ -3,9 +3,12 @@
 
 - name: Install mysql apt-packages
   apt:
-    name: mysql-server
-    update_cache: yes
-    state: present
+      name: "{{ item }}"
+      update_cache: yes
+      state: present
+    with_items:
+      - mysql-server
+      - MySQL-python
 
 - name: Start MySQL Service
   service:
@@ -26,12 +29,6 @@
     dest: ~/.my.cnf
     owner: root
     mode: 0600
-
-#- mysql_user:
-#    name: mathieu
-#    password: 123
-#    priv: '*.*:ALL,GRANT'
-#    state: present
 
 #- name: Create a new database with name 'beerbattle'
 #  mysql_db:
