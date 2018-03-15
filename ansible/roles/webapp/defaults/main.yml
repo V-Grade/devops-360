@@ -1,2 +1,5 @@
 ---
 # defaults file for webapp
+
+webapp_version : 1.0.0
+webapp_setup_webserver: true
