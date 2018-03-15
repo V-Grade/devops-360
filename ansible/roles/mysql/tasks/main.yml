@@ -14,6 +14,12 @@
     owner: root
     mode: 0600
 
+#- mysql_user:
+#    name: mathieu
+#    password: 123
+#    priv: '*.*:ALL,GRANT'
+#    state: present
+
 #- name: Create a new database with name 'beerbattle'
 #  mysql_db:
 #    name: beerbattle
