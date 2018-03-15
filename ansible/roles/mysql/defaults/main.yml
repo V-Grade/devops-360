@@ -7,11 +7,11 @@
     update_cache: yes
     state: present
 
-- name: copy .my.cnf file with root password
-  template:
-    src: templates/root/mysql.j2
-    dest: ~/.my.cnf
-    owner: root
+#- name: copy .my.cnf file with root password
+#  template:
+#    src: templates/root/mysql.j2
+#    dest: ~/.my.cnf
+#    owner: root
 
 #- name: Create a new database with name 'beerbattle'
 #  mysql_db:
