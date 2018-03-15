@@ -49,4 +49,4 @@
   copy:
     src: uwsgi-logrotate
     dest: /etc/logrotate.d/uwsgi
-mode: '0644'
+    mode: '0644'
