@@ -4,4 +4,4 @@
   git:
     repo: https://github.com/Lowess/devops-360-webapp.git
     dest: /opt
-    version: {{ webapp_version }}
+    version: "{{ webapp_version }}"
