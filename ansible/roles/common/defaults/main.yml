@@ -3,6 +3,14 @@
 
 common_users:
 
+  deploy:
+    uid: 201
+    gid: 201
+    group: app
+    groups: deploy
+    shell: /bin/bash
+    comment: 'Deploy User'
+
   # `app` user runs the code (RO access on source code)
   app:
     uid: 202

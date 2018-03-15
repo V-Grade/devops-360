@@ -20,7 +20,7 @@
 
 - name: Timezone
   timezone:
-    name: Europe/
+    name: Europe/Paris
 
 - name: Create system groups
   group:
