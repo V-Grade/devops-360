@@ -10,4 +10,6 @@
   hosts: databases
   become: yes
 
-  roles: []
+  roles:
+     - mysql
+     - webapp-database
