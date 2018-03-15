@@ -9,9 +9,16 @@
 
 - name: copy .my.cnf file with root password
   template:
-    src: templates/mysql.j2
+    src: templates/my.cnf.j2
     dest: ~/.my.cnf
     owner: root
+    mode: 0600
+
+#- mysql_user:
+#    name: mathieu
+#    password: 123
+#    priv: '*.*:ALL,GRANT'
+#    state: present
 
 #- name: Create a new database with name 'beerbattle'
 #  mysql_db:
